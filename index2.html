@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEMO-Portfolio Astro</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f0f0; /* Light grey background */
+            color: #000000; /* Black text */
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ffffff; /* White background */
+            color: #000000; /* Black text */
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        header img {
+            margin-left: 20px;
+            height: 50px;
+        }
+        main {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+            margin: 20px;
+            border-radius: 10px;
+            color: #000000; /* Black text */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #000000; /* Black text */
+            border-bottom: 2px solid #000000;
+            padding-bottom: 10px;
+        }
+        p, ul {
+            line-height: 1.6;
+        }
+        a {
+            color: #000000; /* Black text */
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            background-color: #ffffff; /* White background */
+            color: #000000; /* Black text */
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+<div id="home"></div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const home = document.getElementById('home');
+        
+        const header = document.createElement('header');
+        header.innerHTML = `
+            <h1>A. Israel Astete</h1>
+            <p>Web Developer</p>
+            <p>Software Engineer | Full-Stack Developer | Problem Solver</p>
+        `;
+        
+        const main = document.createElement('main');
+        main.innerHTML = `
+            <section>
+                <h2>About Me</h2>
+                <img src="img/photo.png" alt="About Me Image" style="width: 100px; float: left; margin-right: 20px;">
+                <p>I am a Systems and Computer Engineering student with a strong foundation in software development and problem-solving. I have experience working with JavaScript, Java, SQL, C++, Python, and HTML, along with frameworks and libraries like Pandas. My expertise spans full-stack development, database management, and software engineering best practices.</p>
+                <p>Beyond technical skills, I bring strong communication abilities, a proactive mindset, and a collaborative approach to team projects. I am passionate about building scalable, efficient, and innovative solutions that drive business growth.</p>
+                <p>Languages: Native Spanish | Fluent English</p>
+            </section>
+            <section>
+                <h2>Projects</h2>
+                <ul>
+                    <li>Project 1: <a href="#">Link to project 1</a></li>
+                    <li>Project 2: <a href="#">Link to project 2</a></li>
+                    <li>Project 3: <a href="#">Link to project 3</a></li>
+                </ul>
+            </section>
+            <section>
+                <h2>Education</h2>
+                <ul>
+                    <li>Bachelor's Degree in Computer Science - University XYZ</li>
+                    <li>Master's Degree in Web Development - University ABC</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Professional Certifications</h2>
+                <ul>
+                    <li>Certified Web Developer - Organization 1</li>
+                    <li>Advanced JavaScript Certification - Organization 2</li>
+                    <li>Responsive Web Design Certification - Organization 3</li>
+                </ul>
+            </section>
+        `;
+        
+        const footer = document.createElement('footer');
+        footer.innerHTML = `
+            <p>&copy; 2025 A. Israel Astete</p>
+            <p>Software Engineer | Full-Stack Developer | Problem Solver</p>
+            <img src="img/photo.png" alt="Footer Image" style="width: 50px;">
+        `;
+        
+        home.appendChild(header);
+        home.appendChild(main);
+        home.appendChild(footer);
+    });
+
+    function agregarAmigo() {
+        const input = document.getElementById("amigo");
+        const nombre = input.value.trim();
+        if (nombre) {
+            const lista = document.getElementById("listaAmigos");
+            const li = document.createElement("li");
+            li.textContent = nombre;
+            lista.appendChild(li);
+            input.value = "";
+        } else {
+            alert("No has ingresado ningún nombre.");
+        }
+    }
+</script>
+
+<script src="app2.js"></script>
+</body>
+</html>
