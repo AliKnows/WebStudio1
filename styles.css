@@ -1,0 +1,80 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(img/wallpper.jpg);
+    color: white; /* Aplica color blanco a todo el texto */
+    text-align: center; /* Centraliza el texto */
+}
+
+/* Estilos del encabezado */
+header {
+    display: flex;
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+.logo img{
+    height: 10%;
+   
+}
+header h1 {
+    margin: 0;
+}
+
+/* Estilos de la navegación */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    background-color: #555; /* Color de fondo del botón */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #777; /* Color de fondo del botón al pasar el ratón */
+    text-decoration: none;
+}
+
+/* Estilos del contenido principal */
+main {
+    padding: 6rem 2rem 2rem; /* Ajusta el padding superior para evitar que el contenido quede oculto detrás del menú */
+}
+
+main section {
+    margin-bottom: 2rem;
+}
+
+main h2 {
+    color: white; /* Asegura que los encabezados también sean blancos */
+}
+
+/* Estilos del pie de página */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
